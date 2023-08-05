@@ -15,6 +15,12 @@ public class DemoApplication {
 		return "Hi Open shift";
 	}
 	
+	@PostMapping("/{name}")
+	public String getMessage(@PathVariable String name)
+	{
+		return "Your Name is"+name;
+	}
+	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
